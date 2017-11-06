@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cooperativa.NucleoCompartilhado\Cooperativa.NucleoCompartilhado.csproj" />
+    <ProjectReference Include="..\Infraestructure.Core.Data\Infraestructure.Core.Data.csproj" />
+    <ProjectReference Include="..\Infraestructure.Core\Infraestructure.Core.csproj" />
+    <ProjectReference Include="..\Infraestructure.CrossCutting\Infraestructure.CrossCutting.csproj" />
+  </ItemGroup>
+
+</Project>

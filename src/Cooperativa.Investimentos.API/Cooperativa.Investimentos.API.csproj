@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="2.0.0" />
+    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cooperativa.Investimentos.Infrastructure\Cooperativa.Investimentos.Infrastructure.csproj" />
+    <ProjectReference Include="..\Cooperativa.Investimentos.Storer\Cooperativa.Investimentos.Storer.csproj" />
+    <ProjectReference Include="..\Cooperativa.Investimentos\Cooperativa.Investimentos.csproj" />
+    <ProjectReference Include="..\Infraestructure.BusProvider\Infraestructure.BusProvider.csproj" />
+    <ProjectReference Include="..\Infraestructure.NancyProvider\Infraestructure.NancyProvider.csproj" />
+  </ItemGroup>
+
+</Project>
