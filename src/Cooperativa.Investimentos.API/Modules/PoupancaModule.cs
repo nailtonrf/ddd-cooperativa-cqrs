@@ -22,7 +22,7 @@ namespace Cooperativa.Investimentos.API.Modules
                         novaPoupancaRequisicao.PostoAtendimentoId, novaPoupancaRequisicao.ContaCorrenteId,
                         novaPoupancaRequisicao.Numero, novaPoupancaRequisicao.Digito), novaPoupancaRequisicao.Valor);
 
-                requestContext.Send(criarNovaPoupancaCommand);
+                requestContext.SendCommand(criarNovaPoupancaCommand);
 
                 return $"Comando {criarNovaPoupancaCommand.Id}";
             });

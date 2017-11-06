@@ -19,7 +19,7 @@ namespace Infraestructure.CrossCutting.Contexts
         public Guid Id { get; }
         public DateTime CurrentDateTime => _dateTimeService.CurrentDateTime();
         public DateTime CurrentDate => _dateTimeService.CurrentDate();
-        public void Send<TCommand>(TCommand command) where TCommand : ICommand
+        public void SendCommand<TCommand>(TCommand command) where TCommand : ICommand
         {
             _commandSender.Send(command);
         }

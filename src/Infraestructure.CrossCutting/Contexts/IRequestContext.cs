@@ -8,6 +8,6 @@ namespace Infraestructure.CrossCutting.Contexts
         Guid Id { get; }
         DateTime CurrentDateTime { get; }
         DateTime CurrentDate { get; }
-        void Send<TCommand>(TCommand command) where TCommand : ICommand;
+        void SendCommand<TCommand>(TCommand command) where TCommand : ICommand;
     }
 }
