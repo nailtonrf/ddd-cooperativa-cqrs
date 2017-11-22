@@ -2,14 +2,24 @@
 
 namespace Infraestructure.Core.Injector
 {
-    public interface IInjector : IServiceResolver, IDisposable
+    public interface IInjector : IDisposable
     {
-        IInjector Register<TService, TImplementation>(Lifestyle lifestyle = Lifestyle.Trasient)
+        IInjector AddTransient<TService, TImplementation>()
             where TService : class
             where TImplementation : class, TService;
 
-        IInjector Register(Type service, Type implementation, Lifestyle lifestyle = Lifestyle.Trasient);
+        IInjector AddTransient(Type service, Type implementation);
 
-        IInjector GetChildContainer();
+        IInjector AddScoped<TService, TImplementation>()
+            where TService : class
+            where TImplementation : class, TService;
+
+        IInjector AddScoped(Type service, Type implementation);
+
+        IInjector AddSingleTon<TService, TImplementation>()
+            where TService : class
+            where TImplementation : class, TService;
+
+        IInjector AddSingleTon(Type service, Type implementation);
     }
 }

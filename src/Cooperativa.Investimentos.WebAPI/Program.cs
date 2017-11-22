@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace Cooperativa.Investimentos.API
+namespace Cooperativa.Investimentos.WebAPI
 {
     public class Program
     {
@@ -12,6 +13,11 @@ namespace Cooperativa.Investimentos.API
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging((context, builder) =>
+                {
+                    builder.AddConsole();
+                    builder.AddDebug();
+                })
                 .UseStartup<Startup>()
                 .Build();
     }

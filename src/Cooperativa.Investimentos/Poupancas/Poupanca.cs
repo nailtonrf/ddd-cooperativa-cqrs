@@ -6,7 +6,7 @@ namespace Cooperativa.Investimentos.Poupancas
 {
     public class Poupanca : EntityBase
     {
-        public ContaCorrenteValor ContaCorrente { get; }
+        public ContaCorrente ContaCorrente { get; }
         public decimal Valor { get; private set; }
         public DateTime Aniversario { get; private set; }
         public bool Resgatada { get; private set; }
@@ -16,7 +16,7 @@ namespace Cooperativa.Investimentos.Poupancas
             Resgatada = false;
         }
 
-        public Poupanca(ContaCorrenteValor contaCorrente, decimal valor, DateTime aniversario) : this()
+        public Poupanca(ContaCorrente contaCorrente, decimal valor, DateTime aniversario) : this()
         {
             Contract.ArgumentNullValidation(contaCorrente, nameof(contaCorrente));
             Contract.Requires<ArgumentOutOfRangeException>(valor > 0, nameof(valor));

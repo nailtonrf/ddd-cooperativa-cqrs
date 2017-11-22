@@ -2,15 +2,15 @@ using System;
 
 namespace Infraestructure.Core.Notifications
 {
-    public class DomainNotification
+    public class Notification
     {
-        public DomainNotification()
+        public Notification()
         {
             Id = Guid.NewGuid();
             Date = DateTime.Now;
         }
 
-        public DomainNotification(string key, string value) : this()
+        public Notification(string key, string value) : this()
         {
             Id = Guid.NewGuid();
             Key = key;

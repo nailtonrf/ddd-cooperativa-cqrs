@@ -1,14 +1,14 @@
-﻿using Infraestructure.Core.Bootstrapper;
-using Infraestructure.Core.Injector;
+﻿using Infraestructure.Core.Injector;
 using Infraestructure.Core.Messaging;
 
 namespace Infraestructure.BusProvider
 {
-    public sealed class InMemoryBusProviderBootstrapper : IBootstrapper
+    public static class BusProviderBootstrapperExtensions
     {
-        public void Load(IInjector injector)
+        public static void UseInMemoryBusProvider(this IInjector injector)
         {
-            injector.Register<ICommandSender, CommandSenderProvider>();
+            injector.AddTransient<ICommandSender, CommandSenderProvider>();
+            injector.AddTransient<IEventPublisher, EventPublisherProvider>();
         }
     }
 }

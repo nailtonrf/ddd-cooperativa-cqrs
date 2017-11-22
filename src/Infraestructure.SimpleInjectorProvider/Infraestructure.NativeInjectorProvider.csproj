@@ -6,13 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
-    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Infraestructure.Core\Infraestructure.Core.csproj" />
-    <ProjectReference Include="..\Infraestructure.CrossCutting\Infraestructure.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

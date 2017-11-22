@@ -4,10 +4,10 @@ namespace Cooperativa.Investimentos.Poupancas
 {
     public sealed class CriarNovaPoupancaCommand : CommandBase
     {
-        public ContaCorrenteValor ContaCorrente { get; }
+        public ContaCorrente ContaCorrente { get; }
         public decimal Valor { get; }
 
-        public CriarNovaPoupancaCommand(ContaCorrenteValor contaCorrente, decimal valor)
+        public CriarNovaPoupancaCommand(ContaCorrente contaCorrente, decimal valor)
         {
             ContaCorrente = contaCorrente;
             Valor = valor;

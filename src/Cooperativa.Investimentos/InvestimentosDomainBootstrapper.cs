@@ -1,20 +1,15 @@
 ﻿using Cooperativa.Investimentos.Poupancas;
-using Infraestructure.Core.Bootstrapper;
 using Infraestructure.Core.Injector;
 using Infraestructure.Core.Messaging;
 
 namespace Cooperativa.Investimentos
 {
-    public class InvestimentosDomainBootstrapper : IBootstrapper
+    public static class InvestimentosBootstrapperExtensions
     {
-        /// <summary>
-        /// Registra as dependências do domínio.
-        /// </summary>
-        /// <param name="injector"></param>
-        public void Load(IInjector injector)
+        public static void UseInvestimentosDomain(this IInjector injector)
         {
             injector
-                .Register(typeof(ICommandHandler<CriarNovaPoupancaCommand>), typeof(PoupancaDomainService));
+                .AddTransient(typeof(ICommandHandler<CriarNovaPoupancaCommand>), typeof(PoupancaDomainService));
         }
     }
 }

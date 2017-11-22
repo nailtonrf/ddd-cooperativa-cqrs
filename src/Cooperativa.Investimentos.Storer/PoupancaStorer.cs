@@ -7,34 +7,29 @@ namespace Cooperativa.Investimentos.Storer
 {
     public sealed class PoupancaStorer : IPoupancaStorer
     {
-        private readonly List<Poupanca> _poupancas;
-
-        public PoupancaStorer()
+        public void Dispose()
         {
-            _poupancas = new List<Poupanca>
-            {
-                new Poupanca(new ContaCorrenteValor(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), 1, 9),
-                    100, DateTime.Now)
-            };
+            throw new NotImplementedException();
         }
 
-        public void Save(Poupanca entity)
+        public Poupanca GetById(Guid entityId)
         {
-            _poupancas.Add(entity);
+            throw new NotImplementedException();
+        }
+
+        public void Update(Poupanca entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Create(Poupanca entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void Delete(Poupanca entity)
         {
-            _poupancas.Remove(entity);
-        }
-
-        public Poupanca GetById(Guid id)
-        {
-            return _poupancas.First(p => p.Id == id);
-        }
-
-        public void Dispose()
-        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,16 +10,19 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="2.0.0" />
-    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cooperativa.Investimentos.Infrastructure\Cooperativa.Investimentos.Infrastructure.csproj" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Cooperativa.Investimentos.Storer\Cooperativa.Investimentos.Storer.csproj" />
     <ProjectReference Include="..\Cooperativa.Investimentos\Cooperativa.Investimentos.csproj" />
     <ProjectReference Include="..\Infraestructure.BusProvider\Infraestructure.BusProvider.csproj" />
-    <ProjectReference Include="..\Infraestructure.NancyProvider\Infraestructure.NancyProvider.csproj" />
+    <ProjectReference Include="..\Infraestructure.Core\Infraestructure.Core.csproj" />
+    <ProjectReference Include="..\Infraestructure.SimpleInjectorProvider\Infraestructure.NativeInjectorProvider.csproj" />
   </ItemGroup>
 
 </Project>

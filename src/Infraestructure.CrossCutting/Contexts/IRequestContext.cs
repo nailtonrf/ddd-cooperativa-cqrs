@@ -9,5 +9,6 @@ namespace Infraestructure.CrossCutting.Contexts
         DateTime CurrentDateTime { get; }
         DateTime CurrentDate { get; }
         void SendCommand<TCommand>(TCommand command) where TCommand : ICommand;
+        void PublishEvent<TEvent>(TEvent @event) where TEvent : IEvent;
     }
 }
