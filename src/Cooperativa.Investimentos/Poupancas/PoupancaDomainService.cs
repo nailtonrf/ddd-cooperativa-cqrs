@@ -1,4 +1,4 @@
-﻿using Infraestructure.CrossCutting.Contexts;
+﻿using Infraestructure.Core.Contexts;
 
 namespace Cooperativa.Investimentos.Poupancas
 {

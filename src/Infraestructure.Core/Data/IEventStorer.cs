@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Infraestructure.Core.Messaging;
 
-namespace Infraestructure.Core.Data.Repositories
+namespace Infraestructure.Core.Data
 {
     public interface IEventStorer
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Infraestructure.Core.Messaging;
 
-namespace Infraestructure.CrossCutting.Contexts
+namespace Infraestructure.Core.Contexts
 {
     public interface IRequestContext
     {

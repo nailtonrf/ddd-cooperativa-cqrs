@@ -1,4 +1,4 @@
-﻿using Infraestructure.Core.Data.Repositories;
+﻿using Infraestructure.Core.Data;
 
 namespace Cooperativa.Investimentos.Poupancas
 {

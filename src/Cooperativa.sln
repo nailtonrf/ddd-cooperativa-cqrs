@@ -11,15 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluções", "Soluções", "{52447298-03A5-4697-B25D-F2C0234B79CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.Core.Data", "Infraestructure.Core.Data\Infraestructure.Core.Data.csproj", "{FCEBCEC0-216C-4FC6-AAD6-DF53AAA5D9A9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Núcleo Compartilhado", "Núcleo Compartilhado", "{40B34AE2-0C9A-4263-9889-2C3E4150D654}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooperativa.NucleoCompartilhado", "Cooperativa.NucleoCompartilhado\Cooperativa.NucleoCompartilhado.csproj", "{7176454D-9FFE-4F1F-855B-4C289FA56859}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooperativa.Investimentos", "Cooperativa.Investimentos\Cooperativa.Investimentos.csproj", "{D829FF0B-39C1-4920-8BD3-3EF036D85E73}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.CrossCutting", "Infraestructure.CrossCutting\Infraestructure.CrossCutting.csproj", "{43A26841-A653-46C3-B0B8-7FE015405ED0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooperativa.Investimentos.Storer", "Cooperativa.Investimentos.Storer\Cooperativa.Investimentos.Storer.csproj", "{67A39A6F-4B01-40D0-AF6E-A61120EB80C0}"
 EndProject
@@ -33,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.NativeInjec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.Core.Data.DapperProvider", "Infraestructure.Core.Data.DapperProvider\Infraestructure.Core.Data.DapperProvider.csproj", "{86138214-32B6-496F-9B25-627311EA0C53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.SerializerProvider", "Infraestructure.SerializerProvider\Infraestructure.SerializerProvider.csproj", "{B57C843E-FE36-4FD0-8552-92A855AA359B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infraestructure.SerializerProvider", "Infraestructure.SerializerProvider\Infraestructure.SerializerProvider.csproj", "{B57C843E-FE36-4FD0-8552-92A855AA359B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +41,6 @@ Global
 		{841C2E0D-567B-4DE3-B805-E80015A1E19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{841C2E0D-567B-4DE3-B805-E80015A1E19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{841C2E0D-567B-4DE3-B805-E80015A1E19F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FCEBCEC0-216C-4FC6-AAD6-DF53AAA5D9A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCEBCEC0-216C-4FC6-AAD6-DF53AAA5D9A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCEBCEC0-216C-4FC6-AAD6-DF53AAA5D9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCEBCEC0-216C-4FC6-AAD6-DF53AAA5D9A9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7176454D-9FFE-4F1F-855B-4C289FA56859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7176454D-9FFE-4F1F-855B-4C289FA56859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7176454D-9FFE-4F1F-855B-4C289FA56859}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,10 +49,6 @@ Global
 		{D829FF0B-39C1-4920-8BD3-3EF036D85E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D829FF0B-39C1-4920-8BD3-3EF036D85E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D829FF0B-39C1-4920-8BD3-3EF036D85E73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43A26841-A653-46C3-B0B8-7FE015405ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43A26841-A653-46C3-B0B8-7FE015405ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43A26841-A653-46C3-B0B8-7FE015405ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43A26841-A653-46C3-B0B8-7FE015405ED0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67A39A6F-4B01-40D0-AF6E-A61120EB80C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67A39A6F-4B01-40D0-AF6E-A61120EB80C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67A39A6F-4B01-40D0-AF6E-A61120EB80C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -92,10 +80,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{841C2E0D-567B-4DE3-B805-E80015A1E19F} = {F8F02509-54F6-4ED6-8769-282B1EAAB073}
 		{A79C6905-C4A7-47D4-B111-EBDB436A0D06} = {52447298-03A5-4697-B25D-F2C0234B79CF}
-		{FCEBCEC0-216C-4FC6-AAD6-DF53AAA5D9A9} = {F8F02509-54F6-4ED6-8769-282B1EAAB073}
 		{7176454D-9FFE-4F1F-855B-4C289FA56859} = {40B34AE2-0C9A-4263-9889-2C3E4150D654}
 		{D829FF0B-39C1-4920-8BD3-3EF036D85E73} = {A79C6905-C4A7-47D4-B111-EBDB436A0D06}
-		{43A26841-A653-46C3-B0B8-7FE015405ED0} = {F8F02509-54F6-4ED6-8769-282B1EAAB073}
 		{67A39A6F-4B01-40D0-AF6E-A61120EB80C0} = {A79C6905-C4A7-47D4-B111-EBDB436A0D06}
 		{5C0E0748-5BF3-448F-A713-A7CA7B039B3C} = {C865B215-4645-4A0E-AC62-3C096F2AD1FD}
 		{C865B215-4645-4A0E-AC62-3C096F2AD1FD} = {F8F02509-54F6-4ED6-8769-282B1EAAB073}

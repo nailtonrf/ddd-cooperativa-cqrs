@@ -1,4 +1,4 @@
-﻿using Infraestructure.Core.Data.Repositories;
+﻿using Infraestructure.Core.Data;
 using System;
 using System.Collections.Generic;
 using Infraestructure.Core.Messaging;

@@ -1,8 +1,7 @@
 ﻿using System;
-using Infraestructure.Core;
 using Infraestructure.Core.Messaging;
 
-namespace Infraestructure.CrossCutting.Contexts
+namespace Infraestructure.Core.Contexts
 {
     public sealed class RequestContext : IRequestContext
     {

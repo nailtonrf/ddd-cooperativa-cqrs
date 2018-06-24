@@ -1,6 +1,6 @@
 ﻿using Cooperativa.Investimentos.Poupancas;
 using Cooperativa.Investimentos.WebAPI.Models;
-using Infraestructure.CrossCutting.Contexts;
+using Infraestructure.Core.Contexts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cooperativa.Investimentos.WebAPI.Controllers

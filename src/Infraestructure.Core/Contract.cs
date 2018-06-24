@@ -21,7 +21,7 @@ namespace Infraestructure.Core
                 throw exception;
             }
 
-            throw new InvalidOperationException(string.Format("Método Contract.Requires não conseguir instanciar a excessão do tipo {0}.",
+            throw new InvalidOperationException(string.Format("Método Contract.Requires não conseguio instanciar a excessão do tipo {0}.",
                 typeof(TException).Name));
         }
 

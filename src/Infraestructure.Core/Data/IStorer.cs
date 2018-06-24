@@ -1,7 +1,7 @@
 ﻿using Infraestructure.Core.DomainModel;
 using System;
 
-namespace Infraestructure.Core.Data.Repositories
+namespace Infraestructure.Core.Data
 {
     public interface IStorer<T> : IDisposable where T : class, IEntity
     {

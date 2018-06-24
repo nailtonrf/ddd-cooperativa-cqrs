@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Dapper;
-using Infraestructure.Core.Data.Repositories;
+using Infraestructure.Core.Data;
 using Infraestructure.Core.Messaging;
 using Infraestructure.Core.Serializer;
 

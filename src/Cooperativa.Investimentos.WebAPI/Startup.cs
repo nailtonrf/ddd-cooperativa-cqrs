@@ -2,9 +2,9 @@
 using Cooperativa.Investimentos.Storer;
 using Infraestructure.BusProvider;
 using Infraestructure.Core;
-using Infraestructure.Core.Data.Repositories;
+using Infraestructure.Core.Contexts;
+using Infraestructure.Core.Data;
 using Infraestructure.Core.Injector;
-using Infraestructure.CrossCutting.Contexts;
 using Infraestructure.NativeInjectorProvider;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -54,8 +54,6 @@ namespace Cooperativa.Investimentos.WebAPI
             });
 
             app.UseMvc();
-
-            app.UseTransactionalContext();
         }
 
         private static void RegisterDependencies(IInjector injector)

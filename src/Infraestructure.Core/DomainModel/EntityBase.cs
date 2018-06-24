@@ -4,7 +4,7 @@ namespace Infraestructure.Core.DomainModel
 {
     public abstract class EntityBase : IEntity
     {
-        public Guid Id { get; protected set; }
+        public Guid Id { get; }
 
         protected EntityBase()
         {

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Dapper;
-using Infraestructure.Core.Data.Repositories;
 using Infraestructure.Core.DomainModel;
 
 namespace Infraestructure.Core.Data.DapperProvider
