@@ -1,4 +1,5 @@
-﻿using Cooperativa.Investimentos.Poupancas;
+﻿using System;
+using Cooperativa.Investimentos.Poupancas;
 using Cooperativa.Investimentos.WebAPI.Models;
 using Infraestructure.Core.Contexts;
 using Microsoft.AspNetCore.Mvc;
@@ -30,9 +31,11 @@ namespace Cooperativa.Investimentos.WebAPI.Controllers
             }
 
             var criarNovaPoupancaCommand = new CriarNovaPoupancaCommand(
-                new ContaCorrente(criarNovaPoupancaRequest.CooperativaId,
-                    criarNovaPoupancaRequest.PostoAtendimentoId, criarNovaPoupancaRequest.ContaCorrenteId,
-                    criarNovaPoupancaRequest.Numero, criarNovaPoupancaRequest.Digito), criarNovaPoupancaRequest.Valor);
+                new ContaCorrente(Guid.Parse(criarNovaPoupancaRequest.CooperativaId),
+                    Guid.Parse(criarNovaPoupancaRequest.PostoAtendimentoId),
+                    Guid.Parse(criarNovaPoupancaRequest.ContaCorrenteId),
+                    criarNovaPoupancaRequest.Numero, criarNovaPoupancaRequest.Digito), 
+                    criarNovaPoupancaRequest.Valor);
 
             _requestContext.SendCommand(criarNovaPoupancaCommand);
 

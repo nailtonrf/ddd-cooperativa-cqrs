@@ -15,8 +15,11 @@ namespace Infraestructure.BusProvider
         public void Publish<TEvent>(TEvent @event) where TEvent : IEvent
         {
             var eventHandlerType = typeof(IEventHandler<TEvent>);
-            var eventHandler = _resolver.Resolve(eventHandlerType) as IEventHandler<TEvent>;
-            eventHandler?.Handle(@event);
+            var eventHandlers = _resolver.ResolveAll(eventHandlerType);
+            foreach (var eventHandler in eventHandlers)
+            {
+                ((dynamic)eventHandler).Handle(@event);
+            }
         }
     }
 }

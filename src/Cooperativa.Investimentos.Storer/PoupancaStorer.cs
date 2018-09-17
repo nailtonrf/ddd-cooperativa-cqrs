@@ -1,35 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Cooperativa.Investimentos.Poupancas;
+using Infraestructure.Core.Data;
 
 namespace Cooperativa.Investimentos.Storer
 {
     public sealed class PoupancaStorer : IPoupancaStorer
     {
+        private readonly InvestimentoDbContext _investimentoDbContext;
+
+        public PoupancaStorer(ISessionContext investimentoDbContext)
+        {
+            _investimentoDbContext = (InvestimentoDbContext)investimentoDbContext;
+        }
+
         public void Dispose()
         {
-            throw new NotImplementedException();
         }
 
         public Poupanca GetById(Guid entityId)
         {
-            throw new NotImplementedException();
+            return _investimentoDbContext.Poupancas.First(p => p.Id == entityId);
         }
 
         public void Update(Poupanca entity)
         {
-            throw new NotImplementedException();
+            _investimentoDbContext.Entry(entity);
+            _investimentoDbContext.Commit();
         }
 
         public void Create(Poupanca entity)
         {
-            throw new NotImplementedException();
+            _investimentoDbContext.Poupancas.Add(entity);
+            _investimentoDbContext.Commit();
         }
 
         public void Delete(Poupanca entity)
         {
-            throw new NotImplementedException();
+            _investimentoDbContext.Poupancas.Remove(entity);
+            _investimentoDbContext.Commit();
         }
     }
 }

@@ -42,6 +42,12 @@ namespace Infraestructure.NativeInjectorProvider
             return this;
         }
 
+        public IInjector AddScopedFactory<TService>(Func<TService> factory) where TService : class
+        {
+            _nativeServices.AddScoped(s => factory);
+            return this;
+        }
+
         public IInjector AddSingleTon<TService, TImplementation>() where TService : class where TImplementation : class, TService
         {
             _nativeServices.AddSingleton<TService, TImplementation>();

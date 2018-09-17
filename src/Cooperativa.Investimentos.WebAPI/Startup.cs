@@ -1,9 +1,7 @@
-﻿using Cooperativa.Investimentos.Poupancas;
-using Cooperativa.Investimentos.Storer;
+﻿using Cooperativa.Investimentos.Storer;
 using Infraestructure.BusProvider;
 using Infraestructure.Core;
 using Infraestructure.Core.Contexts;
-using Infraestructure.Core.Data;
 using Infraestructure.Core.Injector;
 using Infraestructure.NativeInjectorProvider;
 using Microsoft.AspNetCore.Builder;
@@ -61,12 +59,11 @@ namespace Cooperativa.Investimentos.WebAPI
             injector.UseInMemoryBusProvider();
 
             injector.UseInvestimentosDomain();
+            injector.UseInvestimentosStorer();
 
             injector
                 .AddScoped<IRequestContext, RequestContext>()
-                .AddSingleTon<IDateTimeService, DateTimeService>()
-                .AddSingleTon<IPoupancaStorer, PoupancaStorer>()
-                .AddSingleTon<IEventStorer, EventStorer>();
+                .AddSingleTon<IDateTimeService, DateTimeService>();
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Cooperativa.Investimentos.WebAPI
                     builder.AddDebug();
                 })
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:4000")
                 .Build();
     }
 }

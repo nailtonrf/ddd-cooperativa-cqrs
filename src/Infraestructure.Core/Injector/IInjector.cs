@@ -16,6 +16,9 @@ namespace Infraestructure.Core.Injector
 
         IInjector AddScoped(Type service, Type implementation);
 
+        IInjector AddScopedFactory<TService>(Func<TService> factory)
+            where TService : class;
+
         IInjector AddSingleTon<TService, TImplementation>()
             where TService : class
             where TImplementation : class, TService;

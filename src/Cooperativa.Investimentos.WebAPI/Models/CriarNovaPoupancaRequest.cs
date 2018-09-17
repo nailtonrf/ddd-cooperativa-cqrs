@@ -6,11 +6,11 @@ namespace Cooperativa.Investimentos.WebAPI.Models
     public class CriarNovaPoupancaRequest
     {
         [Required]
-        public Guid CooperativaId { get; set; }
+        public string CooperativaId { get; set; }
         [Required]
-        public Guid PostoAtendimentoId { get; set; }
+        public string PostoAtendimentoId { get; set; }
         [Required]
-        public Guid ContaCorrenteId { get; set; }
+        public string ContaCorrenteId { get; set; }
         [Required]
         public int Numero { get; set; }
         [Required]
